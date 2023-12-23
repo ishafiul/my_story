@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';
+import 'package:story_editor/assets/icons/story_edit_icons_icons.dart';
 
 import '../../domain/providers/notifiers/control_provider.dart';
 import '../../domain/providers/notifiers/draggable_widget_notifier.dart';
@@ -90,12 +91,13 @@ class _TopToolsState extends State<TopTools> {
                       }
                     }),
                 ToolButton(
-                    child: const ImageIcon(
+                  child: Icon(StoryEditIcons.sticker_smile_square_outline,color: Colors.white,),
+                   /* child: const ImageIcon(
                       AssetImage('assets/icons/stickers.png',
                           package: 'stories_editor'),
                       color: Colors.white,
                       size: 20,
-                    ),
+                    ),*/
                     backGroundColor: Colors.black12,
                     onTap: () => createGiphyItem(
                         context: context, giphyKey: controlNotifier.giphyKey)),
